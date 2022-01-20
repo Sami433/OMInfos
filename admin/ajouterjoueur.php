@@ -118,5 +118,3 @@ margin-left:10%;
 
 ?>
 
-
-def

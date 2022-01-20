@@ -68,4 +68,3 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['type'], $_REQUES
 </html>
 
 
-abc

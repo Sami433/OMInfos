@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" type="text/css" href="contact.css">
+        <link rel="stylesheet" type="text/css" href="./assets/contact.css">
 
         <link
             rel="stylesheet"
