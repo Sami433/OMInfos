@@ -66,3 +66,6 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['type'], $_REQUES
         <?php } ?>
     </body>
 </html>
+
+
+abc
