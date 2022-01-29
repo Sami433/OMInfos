@@ -1,6 +1,6 @@
 <?php 
 
-include './admin/config.php';
+include './configuration/config.php';
 
 error_reporting(0); // For not showing any error
 
@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 
 	$sql = "INSERT INTO commentaires (name, email, comment)
 			VALUES ('$name', '$email', '$comment')";
-	$result = mysqli_query($conn, $sql);
+	$result = mysqli_query($omdataconn, $sql);
 	
     if($result==true){
         echo "<script>alert('Votre commentaire a été publié avec succès!')</script>";
@@ -27,7 +27,8 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="icon" type="image/png" href="./images/logo.png"/>
+        <title>Videos OMInfos</title>
         <link rel="stylesheet" type="text/css" href="./assets/videos.css">
      
         <link
@@ -40,8 +41,6 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 
         <div class="video">
             <iframe
-                width="560"
-                height="315"
                 src="https://www.youtube.com/embed/CedZ8Kzcjro"
                 title="YouTube video player"
                 frameborder="0"
@@ -49,7 +48,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                 allowfullscreen="allowfullscreen"></iframe>
         </div>
 
-        <div class="wrapper">
+        <div class="commentaires">
             <form action="" method="POST" class="form">
                 <div class="row">
                     <div class="input-group name">
@@ -80,14 +79,14 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                         required="required"></textarea>
                 </div>
                 <div class="input-group">
-                    <button name="submit" class="btn">Postez</button>
+                    <button name="submit" class="btn">Poster</button>
                 </div>
             </form>
             <div class="prev-comments">
                 <?php 
 			
 			$sql = "SELECT * FROM commentaires";
-			$result = mysqli_query($conn, $sql);
+			$result = mysqli_query($omdataconn, $sql);
 			if (mysqli_num_rows($result) > 0) {
 				while ($row = mysqli_fetch_assoc($result)) {
 

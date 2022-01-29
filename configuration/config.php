@@ -6,10 +6,10 @@ define('DB_PASSWORD', '');
 define('DB_NAME', 'ominfos');
  
 // Connexion à la base de données MySQL 
-$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$omdataconn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
  
-// V�rifier la connexion
-if($conn === false){
+// Vérifier la connexion
+if($omdataconn === false){
     die("ERREUR : Impossible de se connecter. " . mysqli_connect_error());
 }
 ?>

@@ -1,9 +1,10 @@
+
 <?php
 	// Initialiser la session
 	session_start();
 	// Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
 	if(!isset($_SESSION["username"])){
-		header("Location: login.php");
+		header("Location:../admin_authentification/login.php");
 		exit(); 
 	}
 ?>
@@ -16,9 +17,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> OMInfos commentaires </title>
+    <title>Administration commentaires OMInfos </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+    <link href="https://unpkg.com/basscss@7.1.1/css/basscss.min.css" rel="stylesheet">
 
 <style>
 
@@ -81,8 +83,8 @@ flex-direction:column;
                     
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                        <button type="submit" name="updatedata" class="btn btn-primary">Modifier</button>
+                        <button type="button" class="btn mb1 bg-teal" data-dismiss="modal">Fermer</button>
+                        <button type="submit" name="updatedata" class="btn mb1 bg-teal">Modifier</button>
                     </div>
                 </form>
 
@@ -111,8 +113,8 @@ flex-direction:column;
                         <h4> Voulez-vous supprimer ce commentaire?</h4>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"> Non </button>
-                        <button type="submit" name="deletedata" class="btn btn-primary"> Oui je le souhaite. </button>
+                        <button type="button" class="btn mb1 bg-teal" data-dismiss="modal"> Non </button>
+                        <button type="submit" name="deletedata" class="btn btn-danger "> Oui je le souhaite. </button>
                     </div>
                 </form>
 
@@ -135,11 +137,11 @@ flex-direction:column;
                 <div class="card-body">
 
                     <?php
-                $connection = mysqli_connect("localhost:3307","root","");
-                $db = mysqli_select_db($connection, 'ominfos');
+            
+            require ('../../configuration/config.php');
 
                 $query = "SELECT * FROM commentaires";
-                $query_run = mysqli_query($connection, $query);
+                $query_run = mysqli_query($omdataconn, $query);
             ?>
                     <table id="datatableid" class="table table-bordered table-dark">
                         <thead>
@@ -165,10 +167,10 @@ flex-direction:column;
                             
                                
                                 <td>
-                                    <button type="button" class="btn btn-success editbtn"> MODIFIER </button>
+                                    <button type="button" class="btn mb1 bg-teal editbtn"> MODIFIER </button>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-danger deletebtn"> SUPPRIMER </button>
+                                    <button type="button" class="btn mb1 bg-teal deletebtn"> SUPPRIMER </button>
                                 </td>
                             </tr>
                         </tbody>

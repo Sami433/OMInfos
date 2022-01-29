@@ -1,34 +1,46 @@
-﻿<!DOCTYPE html>
+﻿<?php
+	// Initialiser la session
+	session_start();
+	// Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+	if(!isset($_SESSION["username"])){
+		header("Location:login.php");
+		exit(); 
+	}
+
+	
+?>
+
+
+<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../assets/style.css"/>
+        <link rel="stylesheet" href="../../assets/style.css"/>
+        <title>Ajout administrateur OMInfos</title>
     </head>
     <body>
     <?php
-require('config.php');
+require('../../configuration/config.php');
 
-if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['type'], $_REQUEST['password'])){
+if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
 	// récupérer le nom d'utilisateur et supprimer les antislashes ajoutés par le formulaire
 	$username = stripslashes($_REQUEST['username']);
-	$username = mysqli_real_escape_string($conn, $username); 
+	$username = mysqli_real_escape_string($omdataconn, $username); 
 	// récupérer l'email et supprimer les antislashes ajoutés par le formulaire
 	$email = stripslashes($_REQUEST['email']);
-	$email = mysqli_real_escape_string($conn, $email);
+	$email = mysqli_real_escape_string($omdataconn, $email);
 	// récupérer le mot de passe et supprimer les antislashes ajoutés par le formulaire
 	$password = stripslashes($_REQUEST['password']);
-	$password = mysqli_real_escape_string($conn, $password);
+	$password = mysqli_real_escape_string($omdataconn, $password);
 	// récupérer le type (user | admin)
-	$type = stripslashes($_REQUEST['type']);
-	$type = mysqli_real_escape_string($conn, $type);
 	
-    $query = "INSERT into `admins` (username, email, type, password)
-				  VALUES ('$username', '$email', '$type', '".hash('sha256', $password)."')";
-    $res = mysqli_query($conn, $query);
+    $query = "INSERT into `admins` (username, email, password)
+				  VALUES ('$username', '$email', '".hash('sha256', $password)."')";
+    $res = mysqli_query($omdataconn, $query);
 
     if($res){
        echo "<div class='sucess'>
-             <h3>L'utilisateur a été créée avec succés.</h3>
-             <p>Cliquez <a href='espace_admin.php'>ici</a> pour retourner à la page d'accueil</p>
+             <h3>L'administrateur a été créée avec succés.</h3>
+             <p>Cliquez <a href='../espace_admin.php'>ici</a> pour retourner à la page d'accueil</p>
 			 </div>";
     }
 }else{
@@ -48,13 +60,7 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['type'], $_REQUES
                 name="email"
                 placeholder="Email"
                 required="required"/>
-            <div class="input-group">
-                <select class="box-input" name="type" id="type">
-                    <option value="" disabled="disabled" selected="selected">Type</option>
-                    <option value="admin">Admin</option>
-                    <option value="user">User</option>
-                </select>
-            </div>
+          
             <input
                 type="password"
                 class="box-input"

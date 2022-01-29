@@ -1,6 +1,6 @@
 <?php 
 
-include './admin/config.php';
+include './configuration/config.php';
 
 error_reporting(0); // For not showing any error
 
@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
 
 	$sql = "INSERT INTO contact (first_name, last_name, email, message)
 			VALUES ('$firstname', '$lastname', '$email','$message')";
-	$result = mysqli_query($conn, $sql);
+	$result = mysqli_query($omdataconn, $sql);
 
     if($result==true){
         echo "<script>alert('Votre message a été envoyé avec succès! Nous vous répondrons prochainement.')</script>";
@@ -31,7 +31,8 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="icon" type="image/png" href="./images/logo.png"/>
+        <title>Contact OMInfos</title>
         <link rel="stylesheet" type="text/css" href="./assets/contact.css">
 
         <link
@@ -55,33 +56,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
     <body>
 
 
-        <section class="top-nav">
-            <div class="nom">
-                OMInfos
-            </div>
-            <input id="menu-toggle" type="checkbox"/>
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
-            <ul class="menu">
-                <li>
-                    <a href="index.php">Home</a>
-                </li>
-                <li>
-                    <a href="effectif.php">Effectif</a>
-                </li>
-                <li>
-                    <a href="calendrier.php">Calendrier</a>
-                </li>
-                <li>
-                    <a href="videos.php">Videos</a>
-                </li>
-                <li>
-                    <a href="contact.php">Contact</a>
-                </li>
-
-            </ul>
-        </section>
+    <?php include 'includes/navbar.php'; ?>
     
         <div class="contact_form">
             <h3 class="heading">Contactez Nous</h3>
@@ -103,7 +78,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                 <textarea type="text" row="5" col="50" id="message" name="message" placeholder="Entrez votre message"></textarea>
               </div>
               <div class="btn">
-                <button class="button" name="submit" type="submit">Envoi</button>
+                <button class="button" name="submit" type="submit">E &nbsp;N &nbsp;V &nbsp;<i class='far fa-futbol' style='color:black'></i> &nbsp;I</button>
               </div>
             </form>
           </div>

@@ -4,7 +4,7 @@
 {
    if(require("connexiondb.php"))
    {
-     $req = $access->prepare("INSERT INTO joueurs (image, poste, nomJoueur) VALUES (?,?,?)");
+     $req = $omdataconn->prepare("INSERT INTO joueurs (image, poste, nomJoueur) VALUES (?,?,?)");
 
      $req->execute(array($image, $poste, $nomJoueur));
 
@@ -12,11 +12,12 @@
    }
 }
 
+
 function afficher()
 {
 	if(require("connexiondb.php"))
 	{
-		$req=$access->prepare(" SELECT * FROM joueurs ORDER BY id DESC");
+		$req=$omdataconn->prepare(" SELECT * FROM joueurs ORDER BY id DESC");
 
         $req->execute();
 
@@ -32,7 +33,7 @@ function supprimer($id)
 {
 	if(require("connexiondb.php"))
 	{
-		$req=$access->prepare("DELETE FROM joueurs WHERE id=?");
+		$req=$omdataconn->prepare("DELETE FROM joueurs WHERE id=?");
 
 		$req->execute(array($id));
 

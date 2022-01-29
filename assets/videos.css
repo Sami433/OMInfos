@@ -152,74 +152,64 @@ li a{
     border:none;
     border-radius: 10px;
     width: 100%;
-    height: 400px;
+   height: 700px;
   }
 
 
 
 
+  @media (max-width: 700px) {
 
 
+    .video iframe {
 
+height:200px;
 
-
-
-  .video{
-    margin-top: 80px;
-    margin-left:5%;
-    width: 90%;
-  }
-   .video iframe{
-    border:none;
-    border-radius: 10px;
-    width: 100%;
-    height: 400px;
+    }
   }
 
-
-
-.wrapper {
+.commentaires {
     padding: 20px;
     background: #FFF;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
     width: 600px;
     min-height: 400px;
-    margin-left:25%;
+    margin-left:30%;
     margin-top:5%;
     
 }
 
-.wrapper .row {
+.commentaires .row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-
-.wrapper .form .row .input-group {
+ 
+.commentaires  .form .row .input-group {
     padding: 0 10px;
     display: block;
 }
 
-.wrapper .form .row .input-group:first-child {
+.commentaires  .form .row .input-group:first-child {
     padding-left: 0;
 }
 
-.wrapper .form .row .input-group:last-child {
+.commentaires  .form .row .input-group:last-child {
     padding-right: 0;
 }
 
-.wrapper .form .input-group {
+.commentaires  .form .input-group {
     width: 100%;
     height: 50px;
     margin-bottom: 50px;
 }
 
-.wrapper .form .input-group label {
+.commentaires  .form .input-group label {
     font-weight: 600;
     margin-bottom: 5px;
     display: block;
 }
 
-.wrapper .form .input-group .btn {
+.commentaires .form .input-group .btn {
     margin: 20px 0;
     display: block;
     padding: .7rem 2rem;
@@ -234,11 +224,9 @@ li a{
     transition: .3s ease-in;
 }
 
-.wrapper .form .input-group .btn:hover {
-    opacity: 1;
-}
 
-.wrapper .form .input-group input, .wrapper .form .input-group textarea {
+
+.commentaires  .form .input-group input, .commentaires  .form .input-group textarea {
     width: 100%;
     height: 100%;
     border: 1px solid #00BAF0;
@@ -246,19 +234,19 @@ li a{
     padding: 5px 10px;
 }
 
-.wrapper .form .input-group.textarea {
+.commentaires  .form .input-group.textarea {
     height: 200px;
 }
 
-.wrapper .form .input-group.textarea textarea {
+.commentaires  .form .input-group.textarea textarea {
     resize: none;
 }
 
-.wrapper .prev-comments {
+.commentaires  .prev-comments {
     margin-top: 50px;
 }
 
-.wrapper .prev-comments .single-item {
+.commentaires  .prev-comments .single-item {
     background: #FFF;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     padding: 10px 20px;
@@ -266,13 +254,13 @@ li a{
     margin-bottom: 25px;
 }
 
-.wrapper .prev-comments .single-item h4 {
+.commentaires  .prev-comments .single-item h4 {
     font-size: 1.3rem;
     font-weight: 800;
     color: #111;
 }
 
-.wrapper .prev-comments .single-item a {
+.commentaires  .prev-comments .single-item a {
     margin: 10px 0;
     font-size: 1rem;
     color: #111;
@@ -280,7 +268,7 @@ li a{
     display: inline-block;
 }
 
-.wrapper .prev-comments .single-item p {
+.commentaires .prev-comments .single-item p {
     font-size: .9rem;
     color: #111;
 }
@@ -310,23 +298,24 @@ footer {
 
 @media (max-width: 768px) {
    
-.wrapper{
+.commentaires {
 
 width:60%;
+margin-left:20%;
 }
 
-.wrapper .form .input-group {
+.commentaires  .form .input-group {
 
     width:50%;
 
 
 }
 
-.wrapper .form .input-group.textarea {
+.commentaires  .form .input-group.textarea {
     width:95%;
 }
 
-.wrapper .form .input-group.name{
+.commentaires .form .input-group.name{
 margin-left:10px;
 }
 

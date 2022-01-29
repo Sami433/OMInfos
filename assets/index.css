@@ -7,7 +7,7 @@
   
   
 }
-.wrapper{
+.indexominfos{
   position: fixed;
   top: 0;
   left: 0;
@@ -15,19 +15,15 @@
   width: 100%;
   background: linear-gradient( #0da7d9, #38d7ef);
   clip-path: circle(25px at calc(100% - 45px) 45px);   
-  
-
-
   transition: all 0.3s ease-in-out;
 }
-#active:checked ~ .wrapper{
+#active:checked ~ .indexominfos{
   clip-path: circle(75%);
 }
 .menu-btn{
   position: absolute;
   z-index: 1;
   right: 20px;
-  /* left: 20px; */
   top: 20px;
   height: 50px;
   width: 50px;
@@ -38,8 +34,7 @@
   color: #fff;
   cursor: pointer;
   background: linear-gradient(-135deg, #0da7d9, #38d7ef);
-  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-  transition: all 0.3s ease-in-out;
+  
 }
 #active:checked ~ .menu-btn{
   background: #fff;
@@ -48,7 +43,7 @@
 #active:checked ~ .menu-btn i:before{
   content: "\f00d";
 }
-.wrapper ul{
+.indexominfos ul{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -56,10 +51,10 @@
   list-style: none;
   text-align: center;
 }
-.wrapper ul li{
+.indexominfos ul li{
   margin: 15px 0;
 }
-.wrapper ul li a{
+.indexominfos ul li a{
   color: none;
   text-decoration: none;
   font-size: 30px;
@@ -68,9 +63,9 @@
   color: #fff;
   position: relative;
   line-height: 50px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
-.wrapper ul li a:after{
+.indexominfos ul li a:after{
   position: absolute;
   content: "";
   background: #fff;
@@ -82,10 +77,11 @@
   z-index: -1;
   transition: transform 0.3s ease;
 }
-.wrapper ul li a:hover:after{
+
+.indexominfos ul li a:hover:after{
   transform: scaleY(1);
 }
-.wrapper ul li a:hover{
+.indexominfos ul li a:hover{
   color: #38d7ef;
 }
 input[type="checkbox"]{

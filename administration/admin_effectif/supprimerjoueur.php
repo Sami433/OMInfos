@@ -3,7 +3,7 @@
 	session_start();
 	// Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
 	if(!isset($_SESSION["username"])){
-		header("Location:login.php");
+		header("Location:../admin_authentification/login.php");
 		exit(); 
 	}
 
@@ -13,7 +13,7 @@
 
 <?php
 
-  require("../config/joueursFunction.php");
+  require("../../configuration/joueursFunction.php");
   $Joueurs=afficher();
 
 ?>
@@ -32,8 +32,7 @@
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"></script>
-        <title></title>
-
+            <title>Suppression joueurs OMInfos</title>
 
         <style>
             

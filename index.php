@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Fullscreen Overlay Navigation | CodingNepal</title>
+        <link rel="icon" type="image/png" href="./images/logo.png"/>
+        <title>Index OMInfos</title>
         <link rel="stylesheet" href="./assets/index.css">
         <link
             rel="stylesheet"
@@ -13,7 +14,7 @@
         <label for="active" class="menu-btn">
             <i class="fas fa-bars"></i>
         </label>
-        <div class="wrapper">
+        <div class="indexominfos">
             <ul>
                 <li>
                     <a href="index.php">Home</a>
@@ -26,6 +27,12 @@
                 </li>
                 <li>
                     <a href="videos.php">Videos</a>
+                </li>
+                <li>
+                    <a href="boutique.php">Boutique</a>
+                </li>
+                <li>
+                    <a href="galerie.php">Galerie</a>
                 </li>
                 <li>
                     <a href="contact.php">Contact</a>

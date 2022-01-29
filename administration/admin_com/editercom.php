@@ -1,5 +1,5 @@
 <?php
-include 'config.php';
+include '../../configuration/config.php';
 
     if(isset($_POST['updatedata']))
     {   
@@ -11,7 +11,7 @@ include 'config.php';
     
 
         $query = "UPDATE commentaires SET name='$name', email='$email', comment='$comment' WHERE id='$id'  ";
-        $query_run = mysqli_query($conn, $query);
+        $query_run = mysqli_query($omdataconn, $query);
 
         if($query_run)
         {

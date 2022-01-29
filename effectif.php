@@ -1,6 +1,6 @@
 <?php
 
-require("config/joueursFunction.php");
+require("./configuration/joueursFunction.php");
 
   $Joueurs=afficher();
 
@@ -11,7 +11,8 @@ require("config/joueursFunction.php");
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="icon" type="image/png" href="./images/logo.png"/>
+        <title>Effectif OMInfos</title>
         <link rel="stylesheet" type="text/css" href="./assets/effectif.css">
 
         <link
@@ -26,10 +27,6 @@ require("config/joueursFunction.php");
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
             crossorigin="anonymous"></script>
-
-
-
-    
 
     </head>
     <body>
@@ -47,7 +44,7 @@ require("config/joueursFunction.php");
                             <img src="images/football-no-background.png" class="ball">
                         </marquee>
                     </marquee>
-                    <h2>Effectif Equipe A 2021/2022<h2>
+                    <h2>Effectif Equipe A<h2>
 
 
                             <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 ">

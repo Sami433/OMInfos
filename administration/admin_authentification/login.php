@@ -1,30 +1,29 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="../assets/style.css"/>
+        <link rel="stylesheet" href="../../assets/style.css"/>
+		<title>Login administrateur OMInfos</title>
     </head>
     <body>
     <?php
-require('config.php');
+require("../../configuration/config.php");
 session_start();
 
 if (isset($_POST['username'])){
 	$username = stripslashes($_REQUEST['username']);
-	$username = mysqli_real_escape_string($conn, $username);
+	$username = mysqli_real_escape_string($omdataconn, $username);
 	$_SESSION['username'] = $username;
 	$password = stripslashes($_REQUEST['password']);
-	$password = mysqli_real_escape_string($conn, $password);
+	$password = mysqli_real_escape_string($omdataconn, $password);
     $query = "SELECT * FROM `admins` WHERE username='$username' and password='".hash('sha256', $password)."'";
-	$result = mysqli_query($conn,$query) or die(mysql_error());
+	$result = mysqli_query($omdataconn,$query) or die(mysql_error());
 	
 	if (mysqli_num_rows($result) == 1) {
 		$user = mysqli_fetch_assoc($result);
 		// vérifier si l'utilisateur est un administrateur ou un utilisateur
-		if ($user['type'] == 'admin') {
-			header('location: espace_admin.php');		  
-		}else{
-			header('location: logout.php');
-		}
+		
+			header('location:../espace_admin.php');		  
+		
 	}else{
 		$message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
 	}
