@@ -34,6 +34,14 @@ font-family:BachFat;
   
 }
 
+p{
+
+margin-bottom:5%;
+}
+.image{
+margin-left:46%;
+
+}
 
 @keyframes slidein {
   from {
@@ -230,8 +238,13 @@ margin-top: 7%;
 
 .container{
 
-margin-top:52%;
+margin-top:30%;
 
+}
+
+.image{
+
+  margin-left:37%;
 }
 
    

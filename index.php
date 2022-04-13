@@ -37,6 +37,9 @@
                 <li>
                     <a href="contact.php">Contact</a>
                 </li>
+                <li>
+                    <a href="./administration/espace_admin.php">Administration</a>
+                </li>
             </ul>
         </div>
         <div class="content">

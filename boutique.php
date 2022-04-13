@@ -51,12 +51,13 @@
       <div class="album py-5 bg-light">
         <div class="container">
         <h1>BOUTIQUE OMINFOS</h1>
+         <div class="image"><img src="images/attention.jpg" height="100"></div><p> Attention! Il s'agit d'un site démo réalisé pour un examen. N'effectuez aucune opération de paiement. </p>
 
         <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-2 ">
             <div class="col">
               
               <div class="card mb-4 box-shadow">
-              <img src="images/310451g.jpg" height="400">
+              <img src="images/no-image.png" height="400">
                 <div class="card-body">
                 <h2>Maillot OM domicile</h2>
                   <p class="card-text">Maillot domicile de l'Olympique de Marseille.</p>
@@ -75,7 +76,7 @@ name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
             </div>
             <div class="col">
               <div class="card mb-4 box-shadow">
-              <img src="images/puma-maillot-om-2020-2021-exterieur.jpg" height="400">
+              <img src="images/no-image.png" height="400">
 
                 <div class="card-body">
                 <h2>Maillot OM exterieur</h2>
@@ -95,7 +96,7 @@ name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
             </div>
             <div class="col">
               <div class="card mb-4 box-shadow">
-              <img src="images/560710g.jpg" height="400">
+              <img src="images/no-image.png" height="400">
                 <div class="card-body">
                 <h2>Veste OM</h2>
                   <p class="card-text">Veste de survetement de l'Olympique de Marseille.</p>
@@ -116,7 +117,7 @@ name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
 
             <div class="col">
               <div class="card mb-4 box-shadow">
-           <img src="images/0178753001593816591.jpg" height="400">
+           <img src="images/no-image.png" height="400">
                 <div class="card-body">
                 <h2>Masque OM</h2>
                   <p class="card-text">Masque en tissu à l'effigie de l'Olympique de Marseille</p>
@@ -137,7 +138,7 @@ name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
 
             <div class="col">
               <div class="card mb-4 box-shadow">
-              <img src="images/tetine-foot.jpg" height=450>
+              <img src="images/no-image.png" height=450>
                 <div class="card-body ">
                 <h2>Tetine OM</h2>
                   <p class="card-text">Tétine à l'effigie de l'Olympique de Marseille.</p>
@@ -157,7 +158,7 @@ name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
            
             <div class="col">
               <div class="card mb-4 box-shadow">
-                <img src="images/3366364-10231066-thickbox.jpg" height=450>
+                <img src="images/no-image.png" height=450>
                 <div class="card-body">
                 <h2>Sac a dos OM</h2>
                   <p class="card-text"> Sac de sport à l'effigie de l'Olympique de Marseille.</p>

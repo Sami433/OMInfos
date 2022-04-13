@@ -2,12 +2,10 @@
 
 include './configuration/config.php';
 
-error_reporting(0); // For not showing any error
-
-if (isset($_POST['submit'])) { // Check press or not Post Comment Button
-	$name = $_POST['name']; // Get Name from form
-	$email = $_POST['email']; // Get Email from form
-	$comment = $_POST['commnt']; // Get Comment from form
+if (isset($_POST['submit'])) { 
+	$name = $_POST['name']; 
+	$email = $_POST['email']; 
+	$comment = $_POST['comment']; 
 
 	$sql = "INSERT INTO commentaires (name, email, comment)
 			VALUES ('$name', '$email', '$comment')";
@@ -74,7 +72,7 @@ if (isset($_POST['submit'])) { // Check press or not Post Comment Button
                     <label for="comment">Commentaire</label>
                     <textarea
                         id="comment"
-                        name="commnt"
+                        name="comment"
                         placeholder="Entrez votre commentaire"
                         required="required"></textarea>
                 </div>
