@@ -23,9 +23,6 @@
                     <a href="boutique.php">Boutique</a>
                 </li>
                 <li>
-                    <a href="galerie.php">Galerie</a>
-                </li>
-                <li>
                     <a href="contact.php">Contact</a>
                 </li>
                 <li>
