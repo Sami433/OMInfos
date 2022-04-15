@@ -78,7 +78,7 @@ require("./configuration/joueursFunction.php");
                                 </div>
 
                 <footer>
-                    <p>&copy; OMInfos 2022</p>
+                   <p>&copy; Created By Nait-Akli Sami | All Rights Reserved </p>
                     <div class="social-media">
                       
                         <p>
