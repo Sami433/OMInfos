@@ -4,11 +4,11 @@ include './configuration/config.php';
 
 error_reporting(0); // For not showing any error
 
-if (isset($_POST['submit'])) { // Check press or not Post Comment Button
-	$firstname = $_POST['firstname']; // Get Name from form
-    $lastname = $_POST['lastname']; // Get Name from form
-	$email = $_POST['email']; // Get Email from form
-    $message = $_POST['message']; // Get Comment from form
+if (isset($_POST['submit'])) { 
+	$firstname = $_POST['firstname']; 
+    $lastname = $_POST['lastname']; 
+	$email = $_POST['email']; 
+    $message = $_POST['message']; 
 
 	$sql = "INSERT INTO contact (first_name, last_name, email, message)
 			VALUES ('$firstname', '$lastname', '$email','$message')";
