@@ -51,7 +51,7 @@
       <div class="album py-5 bg-light">
         <div class="container">
         <h1>BOUTIQUE OMINFOS</h1>
-         <div class="image"><img src="images/attention.jpg" height="100"></div><p> Attention! Il s'agit d'un site démo réalisé pour un examen. N'effectuez aucune opération de paiement. </p>
+         
 
         <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-2 ">
             <div class="col">
